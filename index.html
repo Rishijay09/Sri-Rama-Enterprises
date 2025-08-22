@@ -1,3 +1,773 @@
 <!DOCTYPE html>
-<!-- saved from url=(0450)https://m.stripe.network/inner.html#url=https%3A%2F%2Fclaude.ai%2Fchat%2Ffce12a2c-cb37-4a0f-8797-8eb45f5a5bcb%3FartifactId%3Dremixed-04ac47cd&title=Remix%20of%20Sri%20Rama%20Enterprises%20-%20Professional%20Website%20-%20Claude&referrer=https%3A%2F%2Fclaude.ai%2Fchat%2Ffce12a2c-cb37-4a0f-8797-8eb45f5a5bcb%3FartifactId%3Dremixed-04ac47cd&muid=4678b096-8b62-4780-95c4-09eac07864ffcbc6d5&sid=NA&version=6&preview=false&__shared_params__[version]=basil -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>StripeM-Inner</title></head><body><script>!function(){var e=document.createElement("script");e.defer=!0,e.src="out-4.5.44.js",e.onload=function(){var e;window.StripeM&&(e=window.location.hash,/ping=false/.test(e)||(e=(e=e.match(/version=(4|6)/))?e[1]:"4",window.StripeM.p({t:!0,v:e})),e=function(e){if(window.opener||window.parent||window)try{var i=((t=JSON.parse(e.data)).message||t).action,t=t.message?t.message.payload:t;switch(i){case"ping":window.StripeM.p({t:!0,o:{muid:t.muid,sid:t.sid,referrer:t.referrer,url:t.url,title:t.title,v2:t.v2},v:t.version||"4"});break;case"track":if(!t.source||!t.data)return;window.StripeM.b({muid:t.muid,sid:t.sid,url:t.url,source:t.source,data:t.data},t.version||"4")}}catch(e){}},window.addEventListener?window.addEventListener("message",e,!1):window.attachEvent("onMessage",e))},document.body.appendChild(e)}()</script><script defer="" src="./out-4.5.44.js.download"></script></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Rama Enterprises - Your Trusted Business Partner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            text-align: left;
+            padding-right: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            animation: slideInUp 1s ease-out;
+            line-height: 1.1;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            animation: slideInUp 1s ease-out 0.3s both;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: slideInRight 1s ease-out 0.5s both;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-photo {
+            width: 100%;
+            max-width: 400px;
+            height: 450px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: #1e3c72;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            margin-left: auto;
+        }
+
+        .hero-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            border-radius: 20px;
+        }
+
+        .photo-placeholder {
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .photo-placeholder div:first-child {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .photo-placeholder div:last-child {
+            font-size: 1rem;
+            color: #1e3c72;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: #ffd700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image::before {
+            content: '🏢';
+            font-size: 15rem;
+            opacity: 0.1;
+            position: absolute;
+            z-index: -1;
+        }
+
+        /* Services Section */
+        #services {
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+        }
+
+        .service-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-info h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .contact-detail span {
+            margin-right: 1rem;
+            color: #1e3c72;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2.5rem;
+            }
+
+            .hero-content {
+                padding-right: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .hero-photo {
+                max-width: 320px;
+                height: 350px;
+                font-size: 4rem;
+                margin-left: 0;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Sri Rama Enterprises</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Sri Rama Enterprises</h1>
+                <p>Your Trusted Partner for Excellence in Business Solutions</p>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <div class="hero-photo">
+                    <div class="photo-placeholder">
+                        <div>🏢</div>
+                        <div>Sri Rama Enterprises</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Building Success Through Trust and Innovation</h3>
+                <p>Sri Rama Enterprises has been a cornerstone of excellence in the business community for years. We are committed to delivering high-quality solutions that drive growth and success for our clients.</p>
+                <p>Our dedication to integrity, innovation, and customer satisfaction has made us a trusted name in the industry. We believe in building long-term relationships based on mutual respect and shared success.</p>
+                <p>With a team of experienced professionals and a commitment to continuous improvement, we strive to exceed expectations in every project we undertake.</p>
+            </div>
+            <div class="about-image">
+                <div style="font-size: 8rem; color: #1e3c72; opacity: 0.8;">🏢</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Cement</h3>
+                <p>High-quality cement supplies for all your construction needs. We offer various grades of cement including OPC, PPC, and specialized variants for different construction applications.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧱</div>
+                <h3>Bricks</h3>
+                <p>Premium quality bricks in various sizes and specifications. From traditional clay bricks to modern fly ash bricks, we provide durable building materials for all construction projects.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🪨</div>
+                <h3>Gravel</h3>
+                <p>Superior quality gravel and aggregates for construction and landscaping projects. Available in different sizes and grades to meet your specific project requirements and standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="from_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="from_email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91-">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your cement, bricks, or gravel requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                    <div id="form-status" style="margin-top: 1rem; padding: 0.5rem; border-radius: 5px; display: none;"></div>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <div class="contact-detail">
+                    <span>👤</span>
+                    <div>
+                        <strong>Contact Person:</strong><br>
+                        Ayyappa Reddy Endreddy
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span>📞</span>
+                    <div>
+                        <strong>Phone:</strong><br>
+                        +91-9390654205
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span>📍</span>
+                    <div>
+                        <strong>Address:</strong><br>
+                        Solasa Busstand Main Road<br>
+                        Phirangipuram(M.D), Guntur(D.t)<br>
+                        PIN - 522529
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span>✉️</span>
+                    <div>
+                        <strong>Email:</strong><br>
+                        info@sriramaenterprises.com
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span>🕒</span>
+                    <div>
+                        <strong>Business Hours:</strong><br>
+                        Mon - Fri: 7:00 AM - 9:00 PM<br>
+                        Sat - Sun: 8:00 AM - 6:00 PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#">📘</a>
+                <a href="#">🐦</a>
+                <a href="#">💼</a>
+                <a href="#">📷</a>
+            </div>
+            <p>&copy; 2025 Sri Rama Enterprises. All rights reserved.</p>
+            <p>Committed to Excellence | Trusted by Businesses Worldwide</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler with multiple messaging options
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('from_name');
+            const email = formData.get('from_email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                showStatus('Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            // Format message for WhatsApp/SMS
+            const formattedMessage = `🏢 NEW INQUIRY - Sri Rama Enterprises
+
+👤 Name: ${name}
+📧 Email: ${email}
+📱 Phone: ${phone || 'Not provided'}
+
+💬 Message: ${message}
+
+⏰ Time: ${new Date().toLocaleString()}`;
+            
+            // Show success message
+            showStatus('Message prepared! Choose how to send:', 'success');
+            
+            // Create action buttons
+            const statusDiv = document.getElementById('form-status');
+            statusDiv.innerHTML = `
+                <div style="margin-bottom: 10px;">✅ Message prepared successfully!</div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button onclick="sendViaWhatsApp('${encodeURIComponent(formattedMessage)}')" 
+                            style="background: #25D366; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                        📱 Send via WhatsApp
+                    </button>
+                    <button onclick="sendViaSMS('${encodeURIComponent(formattedMessage)}')" 
+                            style="background: #007BFF; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                        💬 Send via SMS
+                    </button>
+                    <button onclick="copyMessage('${formattedMessage.replace(/'/g, "\\'")}')" 
+                            style="background: #6C757D; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                        📋 Copy Message
+                    </button>
+                </div>
+            `;
+            
+            // Clear form after 30 seconds
+            setTimeout(() => {
+                this.reset();
+            }, 30000);
+        });
+
+        // WhatsApp function
+        function sendViaWhatsApp(message) {
+            const whatsappURL = `https://wa.me/919390654205?text=${message}`;
+            window.open(whatsappURL, '_blank');
+            showStatus('Opening WhatsApp...', 'success');
+        }
+
+        // SMS function
+        function sendViaSMS(message) {
+            const smsURL = `sms:+919390654205?body=${message}`;
+            window.open(smsURL, '_self');
+            showStatus('Opening SMS app...', 'success');
+        }
+
+        // Copy to clipboard function
+        function copyMessage(message) {
+            navigator.clipboard.writeText(message).then(() => {
+                showStatus('Message copied! You can paste it anywhere.', 'success');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = message;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showStatus('Message copied! You can paste it anywhere.', 'success');
+            });
+        }
+
+        // Function to show form status
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('form-status');
+            statusDiv.style.display = 'block';
+            
+            if (typeof message === 'string') {
+                statusDiv.textContent = message;
+            }
+            
+            if (type === 'success') {
+                statusDiv.style.backgroundColor = '#d4edda';
+                statusDiv.style.color = '#155724';
+                statusDiv.style.border = '1px solid #c3e6cb';
+            } else if (type === 'error') {
+                statusDiv.style.backgroundColor = '#f8d7da';
+                statusDiv.style.color = '#721c24';
+                statusDiv.style.border = '1px solid #f5c6cb';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle (placeholder for future implementation)
+        function toggleMobileMenu() {
+            alert('Mobile menu functionality can be enhanced based on requirements');
+        }
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(30, 60, 114, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.service-card, .contact-detail');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Set initial styles for animation
+        document.querySelectorAll('.service-card, .contact-detail').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
